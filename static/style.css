@@ -1,0 +1,340 @@
+#header ,.message,.form_style,.button-content{
+    text-align: center;
+}
+#header,.message{
+  color: aqua;
+}
+body{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/414/126/559/5bd334f8d938f-wallpaper-preview.jpg");
+    background-size: cover;
+}
+.input {
+    width:400px;
+    max-width: 400px;
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+  }
+  
+  input:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+  }
+  
+  input:hover {
+    outline: 1px solid lightgrey;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    position: relative;
+    color: #4189e0;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    border: 2px solid #4189e0;
+    padding: 1em 2em 1em 2em;
+    border-radius: 1em;
+  }
+  label:before {
+    content: "";
+    height: 1em;
+    width: 1em;
+    border: 3px solid #4189e0;
+    border-radius: 50%;
+  }
+  input[type="radio"]:checked + label:before {
+    height: 1em;
+    width: 1em;
+    border: 0.65em solid #ffffff;
+    background-color: #4189e0;
+  }
+
+
+  .div-label1{
+   
+    display: inline;
+    padding: 40px;
+  
+  }
+  .div-label2{
+    display: inline;
+  }
+
+  /* for download.button-content */
+  
+
+  
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  position: relative;
+  padding: 0 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 0;
+  box-shadow: hsl(210deg 87% 36%) 0px 7px 0px 0px;
+  background-color: hsl(210deg 100% 44%);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 31ms cubic-bezier(.5, .7, .4, 1);
+ 
+ }
+ 
+.button-content:before {
+  content: attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  opacity: 1;
+ }
+ 
+.button-content:active {
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: 35ms cubic-bezier(.5, .7, .4, 1);
+ }
+ 
+.button-content:hover:before {
+  transition: all .0s;
+  transform: translateY(100%);
+  opacity: 0;
+ }
+ 
+.button-content i {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-style: normal;
+  transition: all 2s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+ }
+ 
+.button-content:hover i {
+  transition: all .2s ease;
+  transform: translateY(0px);
+  opacity: 1;
+ }
+ 
+.button-content:hover i:nth-child(1) {
+  transition-delay: 0.045s;
+ }
+ 
+.button-content:hover i:nth-child(2) {
+  transition-delay: calc(0.045s * 3);
+ }
+ 
+.button-content:hover i:nth-child(3) {
+  transition-delay: calc(0.045s * 4);
+ }
+ 
+.button-content:hover i:nth-child(4) {
+  transition-delay: calc(0.045s * 5);
+ }
+ 
+.button-content:hover i:nth-child(6) {
+  transition-delay: calc(0.045s * 6);
+ }
+ 
+.button-content:hover i:nth-child(7) {
+  transition-delay: calc(0.045s * 7);
+ }
+ 
+.button-content:hover i:nth-child(8) {
+  transition-delay: calc(0.045s * 8);
+ }
+ 
+.button-content:hover i:nth-child(9) {
+  transition-delay: calc(0.045s * 9);
+ }
+ 
+.button-content:hover i:nth-child(10) {
+  transition-delay: calc(0.045s * 10);
+ }
+
+.dow{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* for mode on and mode of new file button */
+
+
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+/* responsive page */
+
+
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  /* Center header and message text */
+  #header, .message {
+      font-size: 1.5em;
+      padding: 0.5em;
+  }
+  
+  /* Adjust the form layout */
+  .form_style {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Resize input field */
+  .input {
+      width: 100%;
+      max-width: 100%;
+      min-height: 40px;
+  }
+
+  /* Align radio buttons vertically */
+  .main-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+  }
+
+  /* Adjust button sizes and text */
+  .btn, .button-content {
+      width: 80%;
+      font-size: 16px;
+      padding: 0.75em 1em;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  #header, .message {
+      font-size: 1.2em;
+      padding: 0.3em;
+  }
+  
+  .input {
+      width: 90%;
+  }
+
+  .btn, .button-content {
+      font-size: 14px;
+      padding: 0.5em 1em;
+  }
+}
+

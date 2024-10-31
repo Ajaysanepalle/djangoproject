@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Toggler</title>
+    <link rel="stylesheet" href="{% static 'mini.css' %}">
+</head>
+
+<body>
+    <nav id="navbar">
+        <h1 id="header">Screenshot Mode Toggle</h1>
+    </nav>
+
+    <!-- Message Display (errors/success) -->
+    <p class="message" style="color:  message_color ;">
+        {{ message }}
+    </p>
+
+    <!-- Main form for file creation and screenshot mode control -->
+    <form action="/" method="POST" class="form_style">
+        {% csrf_token %}
+
+        <!-- File Creation Section -->
+        
+            <input type="text" name="file_name" class="input" placeholder="Enter file name here" ><br><br>
+
+          <div class="main-div">
+              <!-- File Format Selection (Word/Excel) -->
+           <div class="div-label1">
+            <input type="radio" id="word" name="file_format" value="Word" >
+            <label for="word">Word</label>
+        </div>
+        <div class="div-label2">
+          <input type="radio" id="excel" name="file_format" value="Excel" >
+            <label for="excel">Excel</label>
+        </div>
+          </div>
+                  
+                    
+<br><br>
+            <!-- Button to Create New File -->
+            <div >
+                <button class="btn"  type="submit" name="new_file">
+                    <span >NEW FILE</span>
+                </button>
+            </div>
+        
+
+        <br><br>
+
+        <!-- Screenshot Mode Controls -->
+        <div>
+            <button class="btn" type="submit" name="screenshot_on" {% if not file_created %}disabled{% endif %}>
+                <span>MODE ON</span>
+            </button>
+            <button class="btn" type="submit" name="screenshot_off">
+                <span>MODE OFF</span>
+            </button>
+        </div>
+    </form>
+
+    <br><br>
+
+    <!-- Download Button -->
+     
+    <a href="{% url 'download' %}" class="dow">
+        <button class="button-content" alt="Download" >
+            <i>D</i>
+            <i>o</i>
+            <i>w</i>
+            <i>n</i>
+            <i>l</i>
+            <i>o</i>
+            <i>a</i>
+            <i>d</i>
+          </button>
+    </a>
+
+</body>
+</html>
